@@ -8,7 +8,7 @@ import CartWidget from "./CartWidget";
       style={{
         display: "flex",
         justifyContent: "space-between",
-        padding: "10px 20px",
+        
         background: "#eee",
       }}
     >

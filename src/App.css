@@ -43,14 +43,14 @@
 
 @font-face {
   font-family: 'MerloRakasha';
-  src: url('../assets/fonts/MerloRakasha-9MWJj.otf') format('truetype');
+  src: url('/fonts/MerloRakasha.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'QuencyDemo';
-  src: url('../assets/fonts/QuencyDemo-Regular\ 400.otf') format('truetype');
+  src: url('/fonts/QuencyDemo.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

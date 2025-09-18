@@ -20,7 +20,7 @@ function App() {
       <ItemListContainer
         greeting={
           <>
-            <h3 style={{ fontFamily: 'QuencyDemo' }}>Bienvenido</h3>
+            <h3 style={{ fontFamily: 'QuencyDemo' }}>BIENVENIDO</h3>
             <p style={{ fontFamily: 'QuencyDemo' }}>a tu tienda</p>
             <h1 style={{ fontFamily: 'QuencyDemo' }}>Whismiscal</h1>
             <h4 style={{ fontFamily: 'QuencyDemo' }}>Gothic de confianza</h4>

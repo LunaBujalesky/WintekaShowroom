@@ -1,8 +1,8 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import SearchBar from "./SearchBar";
+import SearchBarnav from "./SearchBar";
 
-export default function NavBar() {
+ function NavBar() {
   return (
     <nav
       style={{
@@ -12,7 +12,7 @@ export default function NavBar() {
         background: "#eee",
       }}
     >
-      <SearchBar />
+      <SearchBarnav />
       {/* Enlaces */}
       <ul
         style={{
@@ -43,3 +43,4 @@ export default function NavBar() {
     </nav>
   );
 }
+export default NavBar;

@@ -4,8 +4,8 @@ import TiendaLogo from './assets/wintekalogoborrador.png';
 import './App.css';
 import NavBar from "./components/Navbar";
 import ItemListContainer from "./components/Itemlistcontainer";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+{/*import Header from "./components/Header";*/}
+{/*import Footer from "./components/Footer";*/}
 
 
 function App() {

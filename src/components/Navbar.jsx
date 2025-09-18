@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import SearchBarnav from "./SearchBar";
+{/* import SearchBarnav from "./SearchBar";*/}
 
  function NavBar() {
   return (
@@ -12,7 +12,7 @@ import SearchBarnav from "./SearchBar";
         background: "#eee",
       }}
     >
-      <SearchBarnav />
+      {/*<SearchBarnav />*/}
       {/* Enlaces */}
       <ul
         style={{

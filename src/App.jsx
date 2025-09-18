@@ -11,7 +11,7 @@ import Footer from "./components/Header";
 function App() {
   return (
     <>
-     {/* logo */}
+     {/* logo , mi idea es que esté separado el logo del navbar para que la barra de navegacion luego se siga viendo con el scroll arriba pero el logo quede atras*/}
       <div>
           <img src={TiendaLogo} alt="" />
       </div>
@@ -28,7 +28,7 @@ function App() {
         }
       />
       {/* aqui va la de string que se pedia por consigna*/}
-      <ItemListContainer greeting="Bienvenido a mi tienda" />
+      <ItemListContainer greeting="Hoy 20% off con transferencia"/>
     </>
   )
 }

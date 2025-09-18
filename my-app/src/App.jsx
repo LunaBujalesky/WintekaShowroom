@@ -1,34 +1,34 @@
-import { useState } from 'react'
+import { useState } from 'react';
 {/*import reactLogo from './assets/wintekalogoborrador.png'*/}
-import viteLogo from './assets/wintekalogoborrador.png'
-import './App.css'
+import TiendaLogo from './assets/wintekalogoborrador.png';
+import './App.css';
 import NavBar from "./components/Navbar";
 import ItemListContainer from "./components/Itemlistcontainer";
+import Header from "./components/Header";
+import Footer from "./components/Header";
+
 
 function App() {
-  
-
   return (
     <>
      {/* logo */}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
+          <img src={TiendaLogo} alt="" />
       </div>
-      <h1>Winteka Showroom</h1>
-      <nav>
-      <ul>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/productos">Productos</Link></li>
-        <li><Link to="/talles">Talles</Link></li>
-        <li><Link to="/contacto">Contacto</Link></li>
-      </ul>
-    </nav>
-     {/* carrito de compra*/}
-    <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> 
+      <NavBar />
+       {/* lo puse como elementos de texto para poder conformar la frase mas estéticamente integrada con el diseño */}
+      <ItemListContainer
+        greeting={
+          <>
+            <h3 style={{ fontFamily: 'QuencyDemo' }}>Bienvenido</h3>
+            <p style={{ fontFamily: 'QuencyDemo' }}>a tu tienda</p>
+            <h1 style={{ fontFamily: 'QuencyDemo' }}>Whismiscal</h1>
+            <h4 style={{ fontFamily: 'QuencyDemo' }}>Gothic de confianza</h4>
+          </>
+        }
+      />
+      {/* aqui va la de string que se pedia por consigna*/}
+      <ItemListContainer greeting="Bienvenido a mi tienda" />
     </>
   )
 }

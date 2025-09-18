@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'MerloRakasha';
+  src: url('../assets/fonts/MerloRakasha-9MWJj.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuencyDemo';
+  src: url('../assets/fonts/QuencyDemo-Regular\ 400.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cart-icon {
+  width: 30px; /* o el tamaño que quieras */
+  height: auto;
+  cursor: pointer;
+}

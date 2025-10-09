@@ -1,4 +1,7 @@
 import "../App.css";
+import "../index.css";
+import bannerimg3 from "../assets/bannerimg3.png";
+
 function CarrouselLanding({ greeting }) {
   return (
     <div
@@ -10,7 +13,7 @@ function CarrouselLanding({ greeting }) {
         width: "1837px",
         height:  "fit-content",
         textAlign: "center",
-        backgroundImage: `url("/assets/bannerimg3.png")`,
+        backgroundImage: `url(${bannerimg3})`,
       }}
     >
       {greeting}

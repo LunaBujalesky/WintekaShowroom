@@ -1,9 +1,9 @@
 function Index() {
     return (
-            <div>
-               
-                
-            </div>
+           
+        <body>
+        <div id="root"></div>
+      </body>
         
     );
   }

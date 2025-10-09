@@ -25,7 +25,7 @@ function App() {
     <>
 
       <div>
-          <img src={TiendaLogo} alt=""style={{width: '500px', height: 'fit-content',}}/>
+          <img src={TiendaLogo} alt="" style={{width: '500px', height: 'fit-content',}}/>
       </div>
       
      

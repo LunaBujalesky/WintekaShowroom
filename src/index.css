@@ -2,11 +2,9 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #D4C9A5;
+  background-image: "../assets/background.svg";
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,12 +13,13 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
- 
+  color: #D4C9A5;
   text-decoration: inherit;
+  font-family:'QuencyDemo';
 }
+
 a:hover {
-  color: #535bf2;
+  color: #BC7263;
 }
 
 body {
@@ -47,9 +46,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -60,13 +61,16 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
+
 .product-card {
   width: 250px;
   height: 250px;

@@ -1,5 +1,4 @@
-import "../App.css";
-import "../index.css";
+
 import bannerimg3 from "../assets/bannerimg3.png";
 
 function CarrouselLanding({ greeting }) {

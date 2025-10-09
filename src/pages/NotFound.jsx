@@ -1,4 +1,5 @@
 import ErrorPage from "../assets/4error.png";
+
 function NotFound() {
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', 

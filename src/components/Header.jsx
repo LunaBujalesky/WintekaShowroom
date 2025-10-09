@@ -1,5 +1,6 @@
 
 import TiendaLogo from "../assets/WintekaLogo.svg";
+
 function Header() {
   return (
     <div style={{ width: "100vw",  height: "274px", background:"#322C26",display: "flex",

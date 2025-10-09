@@ -1,4 +1,5 @@
 import Mushrooms from "../assets/honguitosFooter.svg";
+
 function Footer() {
   return (
     <div

@@ -1,6 +1,7 @@
 
 import { products } from "../data/Productos"; 
 import CardItem from "./CardItem";  
+
 function ItemListContainer() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>

@@ -1,4 +1,5 @@
 import SobreContacto from "../components/SobreContacto";
+
 function Contacto() {
   return (
     <section>

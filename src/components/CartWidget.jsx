@@ -13,7 +13,7 @@ export default function CartWidget() {
       style={{ display: "flex", alignItems: "center", cursor: "pointer" }} 
       onClick={handleClick} 
     >
-      <img src={WidgetCarritoIMG} alt="Carrito" />
+      <img src={WidgetCarritoIMG} alt="Carrito" style={{ width: "20px", height: "fit-content", }} />
       <p style={{ marginLeft: "8px" }}>{count}</p>
     </div>
   );

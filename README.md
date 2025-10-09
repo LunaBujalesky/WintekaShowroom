@@ -1,45 +1,46 @@
-# Winteka Showrroom
+# **Winteka Showroom**
 
 Tu tienda de confianza para conseguir los mejores productos de estilo whismiscal gothic, ropa, accesorios, artículos de cerámica y mucho más!Winteka Showroom
-
-🛍️ Descripción
+---
+## **🛍️ Descripción**
 
 Winteka Showroom es una tienda en línea que ofrece una experiencia de compra única para los amantes del estilo Whimsical Gothic. Este proyecto busca combinar estética, funcionalidad y una atmósfera encantadora para brindar a los usuarios una experiencia de compra inolvidable.
+---
+## **🧪 Tecnologías utilizadas**
 
-#🧪 Tecnologías utilizadas
+-Frontend: HTML5, CSS3, JavaScript
 
-Frontend: HTML5, CSS3, JavaScript
+-Framework: Vite
 
-Framework: Vite
-
-Linter: ESLint
+-Linter: ESLint
 
 Licencia: BSL-1.0
 
-#🚀 Instalación
+---
+## **🚀 Instalación**
 
-Clona este repositorio en tu máquina local:
+1.Clona este repositorio en tu máquina local:
 
-git clone https://github.com/LunaBujalesky/WintekaShowroom.git
-
-
-Navega al directorio del proyecto:
-
-cd WintekaShowroom
+```git clone https://github.com/LunaBujalesky/WintekaShowroom.git```
 
 
-Instala las dependencias:
+2.Navega al directorio del proyecto:
 
-npm install
-
-
-Inicia el servidor de desarrollo:
-
-npm run dev
+```cd WintekaShowroom```
 
 
-La aplicación estará disponible en http://localhost:3000.
+3.Instala las dependencias:
 
+```npm install```
+
+
+4. Inicia el servidor de desarrollo:
+
+```npm run dev```
+
+
+5. La aplicación estará disponible en http://localhost.
+---
 📦 Estructura del proyecto
 
 El proyecto está organizado de la siguiente manera:
@@ -54,12 +55,12 @@ WintekaShowroom/
 ├── .gitignore       # Archivos y carpetas ignoradas por Git
 ├── package.json     # Dependencias y scripts del proyecto
 └── vite.config.js   # Configuración de Vite
-
+---
 📄 Licencia
 
 Este proyecto está bajo la Licencia BSL-1.0. Puedes consultar los detalles en el archivo LICENSE
 .
-
+---
 🤝 Contribuciones
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor sigue estos pasos:
@@ -73,7 +74,7 @@ Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica'
 Haz push a la rama (git push origin feature/nueva-caracteristica).
 
 Abre un Pull Request.
-
+---
 📞 Contacto
 
 Para más información o consultas, puedes ponerte en contacto con el autor del proyecto:

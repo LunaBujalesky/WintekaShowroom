@@ -1,46 +1,32 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-{/* import SearchBarnav from "./SearchBar";*/}
+import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
+import userIcon from "../assets/userIcon.svg"; 
 
- function NavBar() {
+function NavBar() {
   return (
     <nav
       style={{
         display: "flex",
         justifyContent: "space-between",
-        
-        background: "#eee",
+        alignItems: "center",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 1000,
+        width: "100%",
+       background: "#322C26",
       }}
     >
-      {/*<SearchBarnav />*/}
-      {/* Enlaces */}
-      <ul
-        style={{
-          display: "flex",
-          gap: "20px",
-          listStyle: "none",
-          position: "fixed",
-          top: 0,
-          width: "100%",
-        }}
-      >
-        <li>
-          <a href="/">Inicio</a>
-        </li>
-        <li>
-          <a href="/productos">Productos</a>
-        </li>
-        <li>
-          <a href="/contacto">Talles</a>
-        </li>
-        <li>
-          <a href="/contacto">Contacto</a>
-        </li>
-      </ul>
-
-      {/* Carrito */}
+      <SearchBar/>
+       <Link to="/">Inicio</Link>
+      <Link to="/productos">Productos</Link>
+      <Link to="/talles">Talles</Link>
+      <Link to="/contacto">Contacto</Link>
       <CartWidget />
-    </nav>
+      <img src={userIcon} alt="" style={{width:"71px", height:"fit-content", cursor: "pointer"}}/>
+    </nav >
   );
 }
 export default NavBar;

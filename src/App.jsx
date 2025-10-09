@@ -1,16 +1,20 @@
+{/*Utilitarios*/}
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
-
+{/*Componentes*/}
 import TiendaLogo from './assets/WintekaLogo.svg';
 import './App.css';
 import NavBar from "./components/Navbar";
 import ItemListContainer from "./components/Itemlistcontainer";
+import CarrouselLanding from "./components/CarrouselLanding";
+import CardItem from "./components/CardItem";
+
 {/*import Header from "./components/Header";*/}
 {/*import Footer from "./components/Footer";*/}
-
+{/*Pages*/}
 import Inicio from "./pages/Index";
-import Productos from "./pages/Productos";
+import Productos from "./data/Productos";
 import Talles from "./pages/Talles";
 import Contacto from "./pages/Contacto";
 import ProductDetail from "./pages/ProductDetail";
@@ -21,11 +25,25 @@ function App() {
     <>
 
       <div>
-          <img src={TiendaLogo} alt="" />
+          <img src={TiendaLogo} alt=""style={{width: '500px', height: 'fit-content',}}/>
       </div>
-      <NavBar />
-       
-      <ItemListContainer
+      
+     
+  
+    <BrowserRouter>
+    <NavBar />
+      <Routes>
+        <Route path="/" element={<Inicio/>} />
+        <Route path="/productos" element={<Productos/>} />
+        <Route path="/talles" element={<Talles/>} />
+        <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/ProductDetail/:id" element={<ProductDetail />} />
+  
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  
+    <CarrouselLanding
         greeting={
           <>
             <h3 style={{ fontFamily: 'QuencyDemo' }}>BIENVENIDO</h3>
@@ -36,21 +54,9 @@ function App() {
         }
       />
       
-      <ItemListContainer greeting="Hoy 20% off con transferencia"/>
-  
-  
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Inicio/>} />
-        <Route path="/productos" element={<Productos/>} />
-        <Route path="/talles" element={<Talles/>} />
-        <Route path="/contacto" element={<Contacto/>} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-  
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-
+      <CarrouselLanding greeting="Hoy 20% off con transferencia"/>
+      <ItemListContainer style={{ display: "flex", gap: "20px" }}/>
+      
 
     </>)
 }

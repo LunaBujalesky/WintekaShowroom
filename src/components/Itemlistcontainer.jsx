@@ -1,10 +1,17 @@
-import MonoVerde from "../assets/MonoVerde.jpg"; 
-import CardItem from "./CardItem";
+
+import { products } from "../data/Productos"; 
+import CardItem from "./CardItem";  
 function ItemListContainer() {
   return (
-    <div>
-      <CardItem title="MonoVerde" price="$2500" img src={MonoVerde} alt=""/>
-      <CardItem title="MonoVerde" price="$3200" img src={MonoVerde}/>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>
+      {products.map(product => (
+        <CardItem 
+          key={product.id}
+          title={product.title}
+          price={`$${product.price}`}
+          image={product.variants?.[0]?.image}
+        />
+      ))}
     </div>
     
   );

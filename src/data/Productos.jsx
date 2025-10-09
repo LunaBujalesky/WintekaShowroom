@@ -1,5 +1,20 @@
 import "../App.css";
 
+
+import MonoVerde from "../assets/MonoVerde.jpg";
+import MonoBeige from "../assets/MonoBeige.jpg";
+import MonoNegro from "../assets/MonoNegro.jpg";
+import MonoRojo from "../assets/MonoRojo.jpg";
+import EnteritoVerde from "../assets/EnteritoVerde.jpg";
+import EnteritoVioleta from "../assets/EnteritoVioleta.jpg";
+import Sweatter1 from "../assets/Sweatter1.jpg";
+import sweater3 from "../assets/sweater3.jpg";
+import imanespolilla from "../assets/imanespolilla.jpg";
+import Acolchado from "../assets/Acolchado.jpg";
+import Lampara from "../assets/Lampara.jpg";
+import candelabroLily from "../assets/candelabroLily.jpg";
+import DepieLily from "../assets/DepieLily.jpg";
+
 export const products = [
   {
     id: 1,
@@ -11,19 +26,19 @@ export const products = [
     variants: [
       {
         color: "verde",
-        image: "/assets/MonoVerde.jpg",
+        image: MonoVerde,
       },
       {
         color: "beige",
-        image: "/assets/MonoBeige.jpg",
+        image: MonoBeige,
       },
       {
         color: "negro",
-        image: "/assets/MonoNegro.jpg",
+        image: MonoNegro,
       },
       {
         color: "rojo",
-        image: "/assets/MonoRojo.jpg",
+        image: MonoRojo,
       },
     ],
   },
@@ -36,13 +51,12 @@ export const products = [
     variants: [
       {
         color: "verde",
-        image: "/assets/EnteritoVerde.jpg",
+        image: EnteritoVerde,
       },
       {
         color: "violeta",
-        image: "/assets/EnteritoVioleta.jpg",
+        image: EnteritoVioleta,
       },
-   
     ],
     Size: [
       {
@@ -62,6 +76,17 @@ export const products = [
     price: 21000,
     category: "Ropa",
     description: "Sweatter hilo de algodon bordado. Color unico.",
+    variants: [
+      {
+        image: Sweatter1,
+      },
+      { 
+        image: sweater3,
+      },
+      { 
+        image: sweater3,
+      },
+    ],
     Size: [
       {
         talle: "S",
@@ -79,16 +104,19 @@ export const products = [
     title: "PoliPin",
     price: 10000,
     category: "Accesorios",
-    description: "Sweatter hilo de algodon bordado. Color unico.",
+    description: "Dijes de polillas que tambien pueden ser usados de pin. Ceramica, acero y piedra.",
     variants: [
       {
         color: "white",
+        image: imanespolilla,
       },
       {
         color: "beige",
+        image: imanespolilla,
       },
       {
         color: "verde",
+        image: imanespolilla,
       },
     ],
   },
@@ -98,14 +126,15 @@ export const products = [
     price: 100000,
     category: "Hogar",
     description: "Acolchado poliester peluche color verde musgo.Muy abrigado y cozy.Viene en 1/2 plaza y dos plazas",
-    Size: [
+    variants: [  
       {
-        talle: "KingSize",
+        Size: "KingSize",
+        image: Acolchado
       },
       {
-        talle: "QueenSize",
-      },
-    ],
+        Size: "QueenSize",
+        image: Acolchado
+      }],
   },
   {
     id: 6,
@@ -116,12 +145,15 @@ export const products = [
     variants: [
       {
         tamano: "Aplique Pared",
+        image: Lampara,
       },
       {
-        tamano:  "Candelabro",
+        tamano: "Candelabro",
+        image: candelabroLily,
       },
       {
-        tamano:  "Velador",
+        tamano: "Velador",
+        image: DepieLily,
       },
     ],
   },

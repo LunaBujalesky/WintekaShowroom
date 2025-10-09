@@ -1,5 +1,5 @@
 import React from "react";
-import WidgetCarritoIMG from '../assets/carritoBorrador.png';
+import WidgetCarritoIMG from '../assets/IconocarroCompra.svg';
 
 export default function CartWidget() {
   return (

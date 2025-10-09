@@ -2,7 +2,7 @@ import React from "react";
 import CartWidget from "./CartWidget";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
-import userIcon from "../assets/userIcon.svg"; 
+import userIcon from "../assets/userIcon.svg";
 
 function NavBar() {
   return (
@@ -16,17 +16,24 @@ function NavBar() {
         left: 0,
         zIndex: 1000,
         width: "100%",
-       background: "#322C26",
+        background: "#322C26",
       }}
     >
-      <SearchBar/>
-       <Link to="/">Inicio</Link>
+      <SearchBar />
+      <Link to="/">Inicio</Link>
       <Link to="/productos">Productos</Link>
       <Link to="/talles">Talles</Link>
       <Link to="/contacto">Contacto</Link>
+      <Link to="/categoria/accesorios">Accesorios</Link>
+      <Link to="/categoria/ropa">Ropa</Link>
+      <Link to="/categoria/hogar">Hogar</Link>
       <CartWidget />
-      <img src={userIcon} alt="" style={{width:"71px", height:"fit-content", cursor: "pointer"}}/>
-    </nav >
+      <img
+        src={userIcon}
+        alt=""
+        style={{ width: "71px", height: "fit-content", cursor: "pointer" }}
+      />
+    </nav>
   );
 }
 export default NavBar;

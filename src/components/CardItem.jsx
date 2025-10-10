@@ -1,11 +1,11 @@
 import './CardItem.css';
 import { Link } from "react-router-dom";
-import fondo from "../assets/FondoCardProducto.svg"; 
+
 
 const CardItem = ({ id, title = "Título", price = "$$$$", image = null }) => {
   return (
     <Link to={`/productos/${id}`} style={{ textDecoration: "none", color: "inherit" }}>
-      <div className="product-card" style={{ backgroundImage: `url(${fondo})` }}>
+      <div className="product-card" >
         <div className="image-container">
           {image ? (
             <img src={image} alt={title} className="product-image" />

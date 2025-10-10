@@ -41,10 +41,11 @@ function App() {
                     <p style={{ fontFamily: "QuencyDemo" }}>a tu tienda</p>
                     <h1 style={{ fontFamily: "QuencyDemo" }}>Whismiscal</h1>
                     <h4 style={{ fontFamily: "QuencyDemo" }}>Gothic de confianza</h4>
+                    <p style={{ fontFamily: "QuencyDemo" }}> Hoy 20% off con transferencia</p>
                   </>
                 }
               />
-              <CarrouselLanding greeting="Hoy 20% off con transferencia" />
+              
               <ItemListContainer style={{ display: "flex", gap: "20px" }} />
             </>
           } />
@@ -56,13 +57,14 @@ function App() {
           { /* <Route path="/productos/:id" element={<ProductDetailPage />} />*/}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-      <main>
+        <main>
         
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </BrowserRouter>
+   
     </>
   );
 }

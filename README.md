@@ -1,12 +1,10 @@
 # **Winteka Showroom**
 
-Tu tienda de confianza para conseguir los mejores productos de estilo whismiscal gothic, ropa, accesorios, artículos de cerámica y mucho más!Winteka Showroom
+Tu tienda de confianza para conseguir los mejores productos de estilo **Whimsical Gothic**: ropa, accesorios, artículos de cerámica y mucho más.
+Este proyecto combina estética, funcionalidad y una atmósfera encantadora para brindar a los usuarios una experiencia de compra inolvidable.
 ---
-## **🛍️ Descripción**
 
-Winteka Showroom es una tienda en línea que ofrece una experiencia de compra única para los amantes del estilo Whimsical Gothic. Este proyecto busca combinar estética, funcionalidad y una atmósfera encantadora para brindar a los usuarios una experiencia de compra inolvidable.
----
-## **🧪 Tecnologías utilizadas**
+# **🧪 Tecnologías utilizadas**
 
 -Frontend: HTML5, CSS3, JavaScript
 
@@ -17,7 +15,7 @@ Winteka Showroom es una tienda en línea que ofrece una experiencia de compra ú
 Licencia: BSL-1.0
 
 ---
-## **🚀 Instalación**
+# **🚀 Instalación**
 
 1.Clona este repositorio en tu máquina local:
 
@@ -41,7 +39,8 @@ Licencia: BSL-1.0
 
 5. La aplicación estará disponible en http://localhost.
 ---
-📦 Estructura del proyecto
+
+# 📦 Estructura del proyecto
 
 El proyecto está organizado de la siguiente manera:
 
@@ -55,27 +54,29 @@ WintekaShowroom/
 ├── .gitignore       # Archivos y carpetas ignoradas por Git
 ├── package.json     # Dependencias y scripts del proyecto
 └── vite.config.js   # Configuración de Vite
+
 ---
-📄 Licencia
+
+# 📄 Licencia
 
 Este proyecto está bajo la Licencia BSL-1.0. Puedes consultar los detalles en el archivo LICENSE
 .
 ---
-🤝 Contribuciones
+# 🤝 Contribuciones
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor sigue estos pasos:
 
-Haz un fork del repositorio.
+1.Haz un fork del repositorio.
 
-Crea una rama para tu característica (git checkout -b feature/nueva-caracteristica).
+2.Crea una rama para tu característica (git checkout -b feature/nueva-caracteristica).
 
-Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica').
+3.Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica').
 
-Haz push a la rama (git push origin feature/nueva-caracteristica).
+4.Haz push a la rama (git push origin feature/nueva-caracteristica).
 
-Abre un Pull Request.
+5.Abre un Pull Request.
 ---
-📞 Contacto
+# 📞 Contacto
 
 Para más información o consultas, puedes ponerte en contacto con el autor del proyecto:
 

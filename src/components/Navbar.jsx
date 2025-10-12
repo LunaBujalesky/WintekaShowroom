@@ -1,11 +1,23 @@
 import CartWidget from "./CartWidget";
 import SearchBar from "./SearchBar";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import userIcon from "../assets/userIcon.svg";
 
-function NavBar() {
+function NavBar( { scrollToProducts } ) {
   const [showSubmenu, setShowSubmenu] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const handleProductosClick = () => {
+    if (location.pathname === "/") {
+      
+      scrollToProducts();
+    } else {
+      
+      navigate("/");
+    }
+  };
 
   const submenuStyle = {
     position: "absolute",
@@ -51,9 +63,13 @@ function NavBar() {
         onMouseLeave={() => setShowSubmenu(false)}
       >
         <span></span>
-        <Link to="/productos" style={linkStyle}>
+           <span
+          style={{ ...linkStyle, cursor: "pointer" }}
+          onClick={scrollToProducts}
+          style={{ fontFamily: "QuencyDemo", cursor: "pointer" }}>
           PRODUCTOS
-        </Link>
+        </span>
+        
         <div style={submenuStyle}>
           <Link to="/categoria/accesorios" style={linkStyle}>
             ACCESORIOS

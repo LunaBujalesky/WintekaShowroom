@@ -9,7 +9,7 @@ function Footer() {
         flexDirection: "column",
       }}
     >
-      <img src={{ Mushrooms }} alt="" />
+      <img src={ Mushrooms } alt="" />
     </div>
   );
 }

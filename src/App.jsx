@@ -1,5 +1,5 @@
 /*Utilitarios*/
-import { useState } from "react";
+import { useState, useRef  } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Productos from "./data/Productos";
@@ -8,7 +8,7 @@ import Productos from "./data/Productos";
 import "./App.css";
 import "./index.css";
 import NavBar from "./components/Navbar";
-import ItemListContainer from "./components/Itemlistcontainer";
+import ItemListContainer from "./components/ItemlistContainer";
 import CarrouselLanding from "./components/CarrouselLanding";
 import CardItem from "./components/CardItem";
 import Header from "./components/Header";
@@ -22,12 +22,17 @@ import ProductDetail from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const productsRef = useRef(null);
+
+  const scrollToProducts = () => {
+    productsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
     <BrowserRouter basename="/WintekaShowroom">
        <header>
        <Header /> 
-        <NavBar />
+        <NavBar scrollToProducts={scrollToProducts} />
       </header>
      
       
@@ -45,11 +50,12 @@ function App() {
                   </>
                 }
               />
-              
+              <div ref={productsRef}>
               <ItemListContainer style={{ display: "flex", gap: "20px" }} />
+              </div>
             </>
           } />
-          <Route path="/productos" element={<Productos />} />
+         
           <Route path="/categoria/:category" element={<ItemListContainer />} />
           <Route path="/talles" element={<Talles />} />
           <Route path="/contacto" element={<Contacto />} />

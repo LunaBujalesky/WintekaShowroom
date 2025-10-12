@@ -24,7 +24,7 @@ import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/WintekaShowroom">
        <header>
        <Header /> 
         <NavBar />

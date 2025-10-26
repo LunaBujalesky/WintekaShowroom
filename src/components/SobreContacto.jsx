@@ -4,6 +4,7 @@ import EstampitaLogo from "../assets/EstampitaContacto.png";
 import FondoMesaMadera from "../assets/FondoMesaMadera.svg";
 
 function SobreContacto() {
+
   return (
     <div
       style={{

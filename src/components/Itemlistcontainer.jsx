@@ -8,7 +8,7 @@ function ItemListContainer() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const { category } = useParams(); // obtenemos la categoría desde la URL
+  const { category } = useParams(); 
   const categoryLower = category?.toLowerCase();
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function ItemListContainer() {
     });
 
     getProducts.then((res) => {
-      // filtramos por categoría si existe
+      
       const filtered = categoryLower
         ? res.filter(
             (product) => product.category.toLowerCase() === categoryLower
@@ -31,7 +31,7 @@ function ItemListContainer() {
       setItems(filtered);
       setLoading(false);
     });
-  }, [categoryLower]); // se vuelve a ejecutar si cambia la categoría
+  }, [categoryLower]); 
 
   if (loading)
     return (

@@ -9,7 +9,6 @@ import "./App.css";
 import "./index.css";
 import NavBar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
-import CarrouselLanding from "./components/CarrouselLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -17,7 +16,7 @@ import Footer from "./components/Footer";
 import Inicio from "./pages/Index";
 import Talles from "./pages/Talles";
 import Contacto from "./pages/Contacto";
-import ProductDetail from "./pages/ProductDetailPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -40,7 +39,7 @@ function App() {
           <Route path="/categoria/:category" element={<ItemListContainer />} />
           <Route path="/talles" element={<Talles />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/ProductDetail/:id" element={<ProductDetail />} />
+          <Route path="/productos/${id}" element={<ProductDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

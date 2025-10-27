@@ -8,7 +8,7 @@ import Productos from "./data/Productos";
 import "./App.css";
 import "./index.css";
 import NavBar from "./components/Navbar";
-import ItemListContainer from "./components/ItemlistContainer";
+import ItemListContainer from "./components/ItemListContainer";
 import CarrouselLanding from "./components/CarrouselLanding";
 import CardItem from "./components/CardItem";
 import Header from "./components/Header";

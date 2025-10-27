@@ -64,9 +64,8 @@ function NavBar( { scrollToProducts } ) {
       >
         <span></span>
            <span
-          style={{ ...linkStyle, cursor: "pointer" }}
-          onClick={scrollToProducts}
-          style={{ fontFamily: "QuencyDemo", cursor: "pointer" }}>
+          style={{ ...linkStyle, cursor: "pointer", fontFamily: "QuencyDemo",}}
+          onClick={scrollToProducts}>
           PRODUCTOS
         </span>
         

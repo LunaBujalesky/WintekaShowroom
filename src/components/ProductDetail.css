@@ -1,0 +1,19 @@
+.botonstyle1 {
+  background-color:#7B8C69; 
+  
+  color: #EEE0B2;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 128px;
+  font-family: "Georgia";
+ 
+  border: 7px inset solid #60714D;
+}
+.botonstyle1:hover {
+  background-color:#322C26; 
+}

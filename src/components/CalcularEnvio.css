@@ -1,0 +1,53 @@
+.envio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 0.85rem;
+    width: fit-content;
+    color: #3c3c3b;
+  }
+  
+  .envio-label {
+    font-size: 0.9rem;
+    color: #3c3c3b;
+  }
+  
+  .envio-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1c8b4;
+    border-radius: 9999px;
+    overflow: hidden;
+    background-color: #f5f3ed;
+  }
+  
+  .envio-input {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    flex: 1;
+    font-family: inherit;
+    font-size: 0.85rem;
+    background-color: transparent;
+    color: #3c3c3b;
+  }
+  
+  .envio-input::placeholder {
+    color: #a9a293;
+  }
+  
+  .envio-btn {
+    background-color: #7c8b6f;
+    color: #EEE0B2;
+    border: none;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .envio-btn:hover {
+    background-color:#322C26; 
+  }

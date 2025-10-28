@@ -1,0 +1,93 @@
+.selector-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.selector-group {
+  position: relative;
+}
+
+.selector-input-number,
+.selector-input-select {
+  background-color: #f5f3ed;
+  border: 1px solid #a7b08a;
+  border-radius: 9999px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 0.9rem;
+  color: #3c3c3b;
+  padding: 6px 28px 6px 10px;
+  transition: border-color 0.3s ease;
+}
+
+
+.selector-input-number {
+  width: 60px;
+  text-align: center;
+  -moz-appearance: textfield;
+  cursor: pointer;
+}
+
+
+.selector-input-number::-webkit-inner-spin-button,
+.selector-input-number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.selector-input-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%236b775f' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M0 0l5 6 5-6H0z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+}
+
+
+.selector-input-number:hover,
+.selector-input-select:hover {
+  border-color: #7b8b6f;
+}
+
+.selector-input-number:focus,
+.selector-input-select:focus {
+  outline: none;
+  border-color: #6c7b61;
+}
+
+
+.number-wrapper {
+  position: relative;
+}
+
+.number-arrows {
+  position: absolute;
+  right: 6px;
+  top: 2px;
+  bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arrow {
+  width: 10px;
+  height: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+}
+
+.arrow.up {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%236b775f' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M0 6l5-6 5 6H0z'/></svg>");
+}
+
+.arrow.down {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%236b775f' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M0 0l5 6 5-6H0z'/></svg>");
+}

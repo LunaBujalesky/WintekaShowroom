@@ -39,7 +39,7 @@ function App() {
           <Route path="/categoria/:category" element={<ItemListContainer />} />
           <Route path="/talles" element={<Talles />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/productos/${id}" element={<ProductDetailPage />} />
+          <Route path="/productos/:id" element={<ProductDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

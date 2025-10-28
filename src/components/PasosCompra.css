@@ -1,0 +1,77 @@
+.step-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #7B8C69; 
+    padding-right: 125px;
+    width: fit-content;
+    height: 100px;
+    margin: auto;
+  }
+  
+  .step {
+    text-align: center;
+    color: #D4C9A5; 
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Georgia", serif;
+    margin-left: 0;
+    text-align: center;
+    }
+  
+ 
+  .star-glow {
+    position: relative;
+    display: inline-block;
+    top: 25%;
+   left: 50%;
+  }
+  
+  .star-svg {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 0 15px rgba(255, 245, 215, 0.7));
+    transition: all 0.3s ease;
+  }
+  
+  .star-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    color: #6b7b5c;
+    font-weight: bold;
+    font-size: 1.6rem;
+    pointer-events: none;
+  }
+  
+  .step-label {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .step-label::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #d9cbb3;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .step.active .step-label::after {
+    width: 80%;
+  }
+  
+  .step.active .star-svg {
+    filter: drop-shadow(0 0 30px rgba(255, 245, 215, 1));
+    transform: scale(1.1);
+  }
+  
+  .step:hover {
+    transform: translateY(-2px);
+  }

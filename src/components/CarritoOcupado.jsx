@@ -1,5 +1,6 @@
 import React from "react";
 import "./CarritoOcupado.css";
+import { useNavigate } from "react-router-dom"; 
 
 export default function CarritoOcupado({ cart, setCart, onClose, variant, quantity   }) {
   const handleRemove = (id) => {
@@ -20,6 +21,8 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
   );
   const envio = 20.0;
   const total = subtotal + envio;
+  const navigate = useNavigate();
+
 
   return (
     <div className="cart-full-container">
@@ -91,7 +94,7 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
         </div>
       </div>
 
-      <button className="buy-button">Comprar</button>
+      <button className="buy-button" onClick={() => navigate("/checkout")}>Comprar</button>
     </div>
   );
 }

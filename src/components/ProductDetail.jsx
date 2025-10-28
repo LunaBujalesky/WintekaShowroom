@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import CostoEnvio from "./CostoEnvio";
 import "./ProductDetail.css";
 import ItemCount from "./ItemCount";
+import { useNavigate } from "react-router-dom";
 function ProductDetail({ product, }) {
   const [variant, setVariant] = useState(product?.variants?.[0]);
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     setVariant(product?.variants?.[0]);
@@ -99,7 +100,7 @@ function ProductDetail({ product, }) {
 
         <div style={{ display: "flex", flexDirection: "row" }}>
          
-          <button className="botonstyle1"> Comprar </button>
+          <button className="botonstyle1" onClick={() => navigate("/checkout")}> Comprar </button>
         </div>
         <CostoEnvio></CostoEnvio>
       </div>

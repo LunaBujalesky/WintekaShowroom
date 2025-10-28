@@ -17,3 +17,23 @@
 .botonstyle1:hover {
   background-color:#322C26; 
 }
+
+.botonstyle2 {
+  background-color:#D4C9A5; 
+  color: #5A6648;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 128px;
+  font-family: "Georgia";
+  border: 7px outset solid #F2CCA7;
+}
+
+.botonstyle2:hover {
+  background-color:#322C26; 
+  color: #EEE0B2;
+}

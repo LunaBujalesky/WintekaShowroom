@@ -18,6 +18,7 @@ import Talles from "./pages/Talles";
 import Contacto from "./pages/Contacto";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const productsRef = useRef(null);
@@ -40,6 +41,7 @@ function App() {
           <Route path="/talles" element={<Talles />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/productos/:id" element={<ProductDetailPage />} />
+          <Route path="/checkout" element={<Checkout />} /> 
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./CarritoOcupado.css";
 
-export default function CarritoOcupado({ cart, setCart, onClose }) {
+export default function CarritoOcupado({ cart, setCart, onClose, variant, quantity   }) {
   const handleRemove = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
@@ -36,9 +36,11 @@ export default function CarritoOcupado({ cart, setCart, onClose }) {
         {cart.map((item) => (
           <div className="cart-item" key={item.id}>
             <img src={item.image} alt={item.name} className="cart-item-img" />
+
             <div className="cart-item-details">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
+
               <div className="cart-item-controls">
                 <label>
                   Cantidad:
@@ -57,6 +59,10 @@ export default function CarritoOcupado({ cart, setCart, onClose }) {
                 </label>
                 <p>${item.price.toFixed(2)}</p>
               </div>
+            </div>
+            <div className="cart-item">
+            <p>Variante: {item.color}</p>
+              <p>{quantity}</p>
             </div>
             <button
               className="remove-button"

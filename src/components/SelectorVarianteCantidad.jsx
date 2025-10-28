@@ -1,7 +1,7 @@
 import React from "react";
 import "./SelectorVarianteCantidad.css";
 
-function SelectorVarianteCantidad({  quantity, setQuantity, variant, setVariant, product,}) 
+function SelectorVarianteCantidad({  quantity, setQuantity, }) 
 
 {
 

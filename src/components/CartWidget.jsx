@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import WidgetCarritoIMG from "../assets/IconocarroCompra.svg";
 import CarritoVacio from "./CarritoVacio";
+import CarritoConCosas from "./CarritoOcupado";
+import { useCart } from "./CartContext";
+
 export default function CartWidget() {
   const [showCart, setShowCart] = useState(false);
-  const [cart, setCart] = useState([]); // simulación del carrito por ahora vacío
+  const { cart, totalQuantity } = useCart();
 
-  const handleCartClick = () => {
-    setShowCart((prev) => !prev); // alterna mostrar/ocultar el carrito
-  };
+  const handleCartClick = () => setShowCart((prev) => !prev);
 
   return (
     <div style={{ position: "relative" }}>
-      {/* Ícono del carrito */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
           cursor: "pointer",
+          gap: "8px",
         }}
         onClick={handleCartClick}
       >
@@ -25,9 +26,13 @@ export default function CartWidget() {
           alt="Carrito"
           style={{ width: "20px", height: "fit-content" }}
         />
+        {totalQuantity > 0 && (
+          <span style={{ fontSize: "0.9rem", color: "#e6d8a8" }}>
+            {totalQuantity}
+          </span>
+        )}
       </div>
 
-      {/* Panel del carrito (condicional) */}
       {showCart && (
         <div
           style={{
@@ -40,12 +45,12 @@ export default function CartWidget() {
           {cart.length === 0 ? (
             <CarritoVacio
               onClose={() => setShowCart(false)}
-              onExplore={() => navigate("/productos")}
+              onExplore={() => console.log("Ir a explorar")}
             />
           ) : (
             <CarritoConCosas
               cart={cart}
-              setCart={setCart}
+              setCart={() => {}}
               onClose={() => setShowCart(false)}
             />
           )}

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import CostoEnvio from "./CostoEnvio";
 import "./ProductDetail.css";
-import SelectorVarianteCantidad from "./SelectorVarianteCantidad";
-function ProductDetail({ product }) {
+import ItemCount from "./ItemCount";
+function ProductDetail({ product, }) {
   const [variant, setVariant] = useState(product?.variants?.[0]);
+
 
   useEffect(() => {
     setVariant(product?.variants?.[0]);
@@ -12,7 +13,7 @@ function ProductDetail({ product }) {
   if (!product) {
     return <p>Producto no encontrado</p>;
   }
-  const [quantity, setQuantity] = useState(1);
+
 
   return (
     <div
@@ -89,17 +90,15 @@ function ProductDetail({ product }) {
             margin: "0px",
           }}
         >
-          <SelectorVarianteCantidad
-            quantity={quantity}
-            setQuantity={setQuantity}
-            variant={variant}
-            setVariant={setVariant}
-            product={product}
-          ></SelectorVarianteCantidad>
+          <ItemCount      product={product}
+        variant={variant}
+        setVariant={setVariant}
+      
+        />
         </div>
 
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <button className="botonstyle1"> Agregar al carrito</button>
+         
           <button className="botonstyle1"> Comprar </button>
         </div>
         <CostoEnvio></CostoEnvio>

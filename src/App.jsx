@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/WintekaShowroom">
+    <BrowserRouter>
       <header>
         <Header />
         <NavBar scrollToProducts={scrollToProducts} />

@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import "./index.css";
 import NavBar from "./components/Navbar";
-import ItemListContainer from "./components/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer.jsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 

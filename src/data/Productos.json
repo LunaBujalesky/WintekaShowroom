@@ -53,9 +53,9 @@
       "category": "Accesorios",
       "description": "Dijes de polillas que tambien pueden ser usados de pin. Ceramica, acero y piedra.",
       "variants": [
-        { "prueba": "white", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
-        { "prueba": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
-        { "prueba": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" }
+        { "prueba": "white", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/polillawhite.jpg" },
+        { "prueba": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/polillabeige.jpg" },
+        { "prueba": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/polillaverde.jpg" }
       ]
     },
     {

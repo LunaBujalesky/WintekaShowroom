@@ -2,17 +2,20 @@
 
 Tu tienda de confianza para conseguir los mejores productos de estilo **Whimsical Gothic**: ropa, accesorios, artículos de cerámica y mucho más.
 Este proyecto combina estética, funcionalidad y una atmósfera encantadora para brindar a los usuarios una experiencia de compra inolvidable.
+
 ---
+## 🌸 Proyecto en línea
+<a href="https://wintekashowroom.vercel.app" target="_blank">Visitar Winteka Showroom</a>
 
 # **🧪 Tecnologías utilizadas**
 
--Frontend: HTML5, CSS3, JavaScript
+![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/Frontend-CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/Frontend-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
--Framework: Vite
-
--Linter: ESLint
-
-Licencia: BSL-1.0
+![Vite](https://img.shields.io/badge/Framework-Vite-646CFF?logo=vite&logoColor=white)
+![ESLint](https://img.shields.io/badge/Linter-ESLint-4B32C3?logo=eslint&logoColor=white)
+![License](https://img.shields.io/badge/Licencia-BSL--1.0-lightgrey)****
 
 ---
 # **🚀 Instalación**

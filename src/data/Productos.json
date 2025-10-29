@@ -65,8 +65,8 @@
       "category": "Hogar",
       "description": "Acolchado poliester peluche color verde musgo.Muy abrigado y cozy.Viene en 1/2 plaza y dos plazas",
       "variants": [
-        { "prueba": "KingSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" },
-        { "prueba": "QueenSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" }
+        { "prueba": "KingSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/kingsize.jpg" },
+        { "prueba": "QueenSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/queensize.jpg" }
       ]
     },
     {

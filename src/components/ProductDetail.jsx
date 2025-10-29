@@ -38,7 +38,36 @@ function ProductDetail({ product }) {
           alignItems: "center",
         }}
       >
-        <div> </div>
+            {/* 🔸 Miniaturas de variantes */}
+            <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            alignItems: "center",
+          }}
+        >
+          {product.variants?.map((v, index) => (
+            <img
+              key={index}
+              src={v.image}
+              alt={v.prueba}
+              onClick={() => setVariant(v)}
+              style={{
+                width: "60px",
+                height: "60px",
+                objectFit: "cover",
+                borderRadius: "6px",
+                cursor: "pointer",
+                border:
+                  variant?.image === v.image
+                    ? "2px solid #322C26"
+                    : "1px solid #ccc",
+                transition: "0.2s",
+              }}
+            />
+          ))}
+        </div>
         <div>
           <img
             src={variant?.image}

@@ -3,8 +3,12 @@ import CostoEnvio from "./CostoEnvio";
 import "./ProductDetail.css";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
+
+
 function ProductDetail({ product, }) {
-  const [variant, setVariant] = useState(product?.variants?.[0]);
+  
+  
+const [variant, setVariant] = useState(product?.variants?.[0]);
   const navigate = useNavigate();
 
   useEffect(() => {

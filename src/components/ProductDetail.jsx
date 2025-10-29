@@ -36,9 +36,10 @@ function ProductDetail({ product }) {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
+          gap: "20px",
         }}
       >
-            {/* 🔸 Miniaturas de variantes */}
+            
             <div
           style={{
             display: "flex",
@@ -54,15 +55,15 @@ function ProductDetail({ product }) {
               alt={v.prueba}
               onClick={() => setVariant(v)}
               style={{
-                width: "60px",
-                height: "60px",
+                width: "80px",
+                height: "80px",
                 objectFit: "cover",
                 borderRadius: "6px",
                 cursor: "pointer",
                 border:
                   variant?.image === v.image
-                    ? "2px solid #322C26"
-                    : "1px solid #ccc",
+                    ? "3px solid rgb(115, 135, 96)"
+                    : "3px solid #ccc",
                 transition: "0.2s",
               }}
             />

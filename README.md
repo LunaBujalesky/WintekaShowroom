@@ -2,8 +2,10 @@
 
 Tu tienda de confianza para conseguir los mejores productos de estilo **Whimsical Gothic**: ropa, accesorios, artículos de cerámica y mucho más.
 Este proyecto combina estética, funcionalidad y una atmósfera encantadora para brindar a los usuarios una experiencia de compra inolvidable.
-Puedes visualizarlo aquí: https://wintekashowroom.vercel.app
+
 ---
+## 🌸 Proyecto en línea
+<a href="https://wintekashowroom.vercel.app" target="_blank">Visitar Winteka Showroom</a>
 
 # **🧪 Tecnologías utilizadas**
 

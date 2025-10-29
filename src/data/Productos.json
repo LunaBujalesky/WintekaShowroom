@@ -38,7 +38,7 @@
       "variants": [
         { "prueba": "S", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Sweatter1.jpg" },
         { "prueba": "XL", "image":"https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" },
-        { "prueba": "M", "image":"https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" }
+        { "prueba": "M", "image":"https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater2.jpg" }
       ],
       "Size": [
         { "talle": "S" },

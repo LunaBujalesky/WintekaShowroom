@@ -37,18 +37,18 @@ function SelectorVarianteCantidad({  quantity, setQuantity, })
           <label htmlFor="variant-select" className="selector-label"></label>
           <select
             id="variant-select"
-            value={variant?.color || ""}
+            value={variant?.prueba|| ""}
             onChange={(e) => {
               const selected = product.variants.find(
-                (v) => v.color === e.target.value
+                (v) => v.prueba === e.target.value
               );
               setVariant(selected);
             }}
             className="selector-input-select"
           >
             {product.variants.map((v) => (
-              <option key={v.color} value={v.color}>
-                {v.color}
+              <option key={v.prueba} value={v.prueba}>
+                {v.prueba}
               </option>
             ))}
           </select>

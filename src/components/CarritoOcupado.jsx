@@ -64,7 +64,7 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
               </div>
             </div>
             <div className="cart-item">
-            <p>Variante: {item.color}</p>
+            <p>Variante: {item.prueba}</p>
               <p>{quantity}</p>
             </div>
             <button

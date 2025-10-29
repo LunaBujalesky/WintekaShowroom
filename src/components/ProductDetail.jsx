@@ -4,11 +4,8 @@ import "./ProductDetail.css";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
 
-
-function ProductDetail({ product, }) {
-  
-  
-const [variant, setVariant] = useState(product?.variants?.[0]);
+function ProductDetail({ product }) {
+  const [variant, setVariant] = useState(product?.variants?.[0]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +15,6 @@ const [variant, setVariant] = useState(product?.variants?.[0]);
   if (!product) {
     return <p>Producto no encontrado</p>;
   }
-
 
   return (
     <div
@@ -69,7 +65,14 @@ const [variant, setVariant] = useState(product?.variants?.[0]);
           ${product.price}
         </h3>
 
-        <p style={{ fontFamily: "Georgia", fontSize: "18px", margin: "0", width: "50%" }}>
+        <p
+          style={{
+            fontFamily: "Georgia",
+            fontSize: "18px",
+            margin: "0",
+            width: "50%",
+          }}
+        >
           {product.description}
         </p>
         <div
@@ -93,20 +96,21 @@ const [variant, setVariant] = useState(product?.variants?.[0]);
             width: "100%",
             height: "fit-content",
             margin: "0px",
-          }}
-        >
-          <ItemCount      product={product}
-        variant={variant}
-        setVariant={setVariant}
-      
-        />
+          }} >
+          <ItemCount
+            product={product}
+            variant={variant}
+            setVariant={setVariant}
+          />
         </div>
 
         <div style={{ display: "flex", flexDirection: "row" }}>
-         
-          <button className="botonstyle1" onClick={() => navigate("/checkout")}> Comprar </button>
+          <CostoEnvio></CostoEnvio>
+          <button className="botonstyle1" onClick={() => navigate("/checkout")}>
+            {" "}
+            Comprar{" "}
+          </button>
         </div>
-        <CostoEnvio></CostoEnvio>
       </div>
     </div>
   );

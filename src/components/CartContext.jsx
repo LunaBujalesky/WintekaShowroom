@@ -7,13 +7,13 @@ export function CartProvider({ children }) {
 
   const addToCart = (product, variant, quantity) => {
     const existing = cart.find(
-      (item) => item.id === product.id && item.variant === variant.color
+      (item) => item.id === product.id && item.variant === variant.prueba
     );
 
     if (existing) {
       setCart(
         cart.map((item) =>
-          item.id === product.id && item.variant === variant.color
+          item.id === product.id && item.variant === variant.prueba
             ? { ...item, quantity: item.quantity + quantity }
             : item
         )
@@ -24,7 +24,7 @@ export function CartProvider({ children }) {
         {
           id: product.id,
           name: product.title,
-          color: variant.color, 
+          prueba: variant.prueba, 
           image: variant.image,
           price: product.price,
           quantity,

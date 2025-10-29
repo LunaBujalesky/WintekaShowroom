@@ -7,10 +7,10 @@
       "category": "accesorios",
       "description": "Moño bordado a mano con flores lila. Tela de fibra y lino. Hilo de poliéster.",
       "variants": [
-        { "color": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoVerde.jpg" },
-        { "color": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoBeige.jpg" },
-        { "color": "negro", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoNegro.jpg" },
-        { "color": "rojo", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoRojo.jpg" }
+        { "prueba": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoVerde.jpg" },
+        { "prueba": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoBeige.jpg" },
+        { "prueba": "negro", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoNegro.jpg" },
+        { "prueba": "rojo",  "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/MonoRojo.jpg" }
       ]
     },
     {
@@ -20,8 +20,8 @@
       "category": "ropa",
       "description": "Tela de corderoy finita, transpirable y muy suave.",
       "variants": [
-        { "color": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/EnteritoVerde.jpg" },
-        { "color": "violeta", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/EnteritoVioleta.jpg" }
+        { "prueba": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/EnteritoVerde.jpg" },
+        { "prueba": "violeta", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/EnteritoVioleta.jpg" }
       ],
       "Size": [
         { "talle": "S" },
@@ -36,9 +36,9 @@
       "category": "Ropa",
       "description": "Sweatter hilo de algodon bordado. Color unico.",
       "variants": [
-        { "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Sweatter1.jpg" },
-        { "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" },
-        { "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" }
+        { "prueba": "S", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Sweatter1.jpg" },
+        { "prueba": "XL", "image":"https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" },
+        { "prueba": "M", "image":"https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/sweater3.jpg" }
       ],
       "Size": [
         { "talle": "S" },
@@ -53,9 +53,9 @@
       "category": "Accesorios",
       "description": "Dijes de polillas que tambien pueden ser usados de pin. Ceramica, acero y piedra.",
       "variants": [
-        { "color": "white", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
-        { "color": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
-        { "color": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" }
+        { "prueba": "white", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
+        { "prueba": "beige", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" },
+        { "prueba": "verde", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/imanespolilla.jpg" }
       ]
     },
     {
@@ -65,8 +65,8 @@
       "category": "Hogar",
       "description": "Acolchado poliester peluche color verde musgo.Muy abrigado y cozy.Viene en 1/2 plaza y dos plazas",
       "variants": [
-        { "Size": "KingSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" },
-        { "Size": "QueenSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" }
+        { "prueba": "KingSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" },
+        { "prueba": "QueenSize", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Acolchado.jpg" }
       ]
     },
     {
@@ -76,9 +76,9 @@
       "category": "Hogar",
       "description": "Lampara con forma de campanita, viene en 3 variantes segun el tipo de iluminacion. En vidrio y ceramica.",
       "variants": [
-        { "tamano": "Aplique Pared", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Lampara.jpg" },
-        { "tamano": "Candelabro", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/candelabroLily.jpg" },
-        { "tamano": "Velador", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/DepieLily.jpg" }
+        { "prueba": "Aplique Pared", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Lampara.jpg" },
+        { "prueba": "Candelabro", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/candelabroLily.jpg" },
+        { "prueba": "Velador", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/DepieLily.jpg" }
       ]
     }
   ]

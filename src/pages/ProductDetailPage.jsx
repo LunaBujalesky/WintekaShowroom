@@ -8,7 +8,43 @@ function ProductDetailPage() {
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
-    return <p>Producto no encontrado</p>;
+    return     <div
+    style={{
+     
+      width: "100%",
+      minHeight: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      marginTop: "3%",
+    }}
+  >
+    <img
+      src={FondoProducto}
+      alt="Fondo producto"
+      style={{
+        position: "absolute",
+        zIndex: -1,
+        width: "90%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+    />
+    <div
+      style={{
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+        flexDirection: "row",
+      }}
+    >
+      <div>
+      <h3 style={{ textAlign: "center", color: "#322C26", marginTop: "10%" }}>Producto no encontrado</h3>;
+      </div>
+    </div>
+  </div>
   }
 
   return (

@@ -2,18 +2,46 @@ import React, { useState, useEffect } from "react";
 import CostoEnvio from "./CostoEnvio";
 import "./ProductDetail.css";
 import ItemCount from "./ItemCount";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function ProductDetail({ product }) {
-  const [variant, setVariant] = useState(product?.variants?.[0]);
+
+import { doc, getDoc } from "firebase/firestore";
+
+function ProductDetail() {
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+  const [variant, setVariant] = useState(null);
   const navigate = useNavigate();
 
+
   useEffect(() => {
-    setVariant(product?.variants?.[0]);
-  }, [product]);
+    const fetchProduct = async () => {
+      try {
+        const productRef = doc(db, "productos", id); 
+        const productSnap = await getDoc(productRef);
+
+        if (productSnap.exists()) {
+          const data = productSnap.data();
+          setProduct(data);
+          setVariant(data.variants?.[0]);
+        } else {
+          console.error("Producto no encontrado en Firebase");
+          setProduct(null);
+        }
+      } catch (error) {
+        console.error("Error al obtener el producto:", error);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
 
   if (!product) {
-    return <p>Producto no encontrado</p>;
+    return (
+      <p style={{ textAlign: "center", marginTop: "10%" }}>
+        Producto no encontrado o cargando...
+      </p>
+    );
   }
 
   return (
@@ -39,8 +67,7 @@ function ProductDetail({ product }) {
           gap: "20px",
         }}
       >
-            
-            <div
+        <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -69,6 +96,7 @@ function ProductDetail({ product }) {
             />
           ))}
         </div>
+
         <div>
           <img
             src={variant?.image}
@@ -105,6 +133,7 @@ function ProductDetail({ product }) {
         >
           {product.description}
         </p>
+
         <div
           style={{
             display: "flex",
@@ -115,9 +144,9 @@ function ProductDetail({ product }) {
             margin: "0px",
           }}
         >
-          {" "}
-          <p>Cantidad:</p> <p>Variante:</p>{" "}
+          <p>Cantidad:</p> <p>Variante:</p>
         </div>
+
         <div
           style={{
             display: "flex",
@@ -126,7 +155,8 @@ function ProductDetail({ product }) {
             width: "100%",
             height: "fit-content",
             margin: "0px",
-          }} >
+          }}
+        >
           <ItemCount
             product={product}
             variant={variant}
@@ -135,10 +165,9 @@ function ProductDetail({ product }) {
         </div>
 
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <CostoEnvio></CostoEnvio>
+          <CostoEnvio />
           <button className="botonstyle1" onClick={() => navigate("/checkout")}>
-            {" "}
-            Comprar{" "}
+            Comprar
           </button>
         </div>
       </div>

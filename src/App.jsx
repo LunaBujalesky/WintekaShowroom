@@ -20,12 +20,15 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
 import Checkout from "./pages/Checkout";
 
+
 function App() {
   const productsRef = useRef(null);
 
   const scrollToProducts = () => {
     productsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+
 
   return (
     <BrowserRouter>

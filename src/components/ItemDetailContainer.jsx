@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../data/Productos"; 
+// import { products } from "../data/Productos"; 
 import ProductDetail from "./ProductDetail";
+
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 function ItemDetailContainer() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
- 
-    const getProduct = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const found = products.find(p => p.id === parseInt(id));
-        resolve(found);
-      }, 1000); 
-    });
+    const db = getFirestore();
+    const refDoc = doc(db, "productos", id); 
 
-    getProduct.then((found) => {
-      setProduct(found);
+    getDoc(refDoc).then((snapshot) => {
+      if (snapshot.exists()) {
+        setProduct({ id: snapshot.id, ...snapshot.data() });
+      } else {
+        console.log("Producto no encontrado");
+      }
     });
-
   }, [id]);
 
   if (!product) {

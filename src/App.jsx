@@ -2,7 +2,7 @@
 import { useState, useRef  } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-
+import { CartProvider } from "./components/CartContext";
 
 /*Componentes*/
 import "./App.css";
@@ -31,6 +31,7 @@ function App() {
 
 
   return (
+    <CartProvider>
     <BrowserRouter>
       <header>
         <Header />
@@ -54,6 +55,7 @@ function App() {
         <Footer />
       </footer>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

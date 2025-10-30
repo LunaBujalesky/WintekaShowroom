@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 
-import { CartProvider } from "./components/CartContext";
+
 
 
 
@@ -32,8 +32,5 @@ const analytics = getAnalytics(app);
 
 
 createRoot(document.getElementById('root')).render(
-  <CartProvider>
   <App />
-</CartProvider>
-  
 )

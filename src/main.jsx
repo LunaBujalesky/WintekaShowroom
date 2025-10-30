@@ -1,13 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-import { CartProvider } from "./components/CartContext";
-
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+
+import App from './App.jsx'
+import { CartProvider } from "./components/CartContext";
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use

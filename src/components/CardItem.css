@@ -54,8 +54,8 @@
   right: 50px;
   text-align: right;
   color: #f0ecb9;
-  text-shadow: 10px 0px 9.7px rgba(87, 85, 64, 0.603);
-  text-shadow: inset 10px 0px 9.7px rgba(214, 210, 155, 0.26);
+  text-shadow: 13px 0px 16px rgba(87, 85, 64, 0.603);
+  text-shadow: inset 13px 0px 16px rgba(214, 210, 155, 0.26);
   z-index: 110;
 }
 

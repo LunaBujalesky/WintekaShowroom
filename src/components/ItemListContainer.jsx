@@ -1,37 +1,37 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../data/Productos";
 import CardItem from "./CardItem";
 import CargandoGif from "../assets/Cargando.gif";
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const { category } = useParams(); 
+  const { category } = useParams();
   const categoryLower = category?.toLowerCase();
 
   useEffect(() => {
-    setLoading(true);
+    const db = getFirestore();
+    const productosRef = collection(db, "productos");
 
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
+   
+    const q = categoryLower
+      ? query(productosRef, where("category", "==", categoryLower))
+      : productosRef;
 
-    getProducts.then((res) => {
-      
-      const filtered = categoryLower
-        ? res.filter(
-            (product) => product.category.toLowerCase() === categoryLower
-          )
-        : res;
-
-      setItems(filtered);
-      setLoading(false);
-    });
-  }, [categoryLower]); 
+    getDocs(q)
+      .then((snapshot) => {
+        const productos = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setItems(productos);
+      })
+      .catch((error) => {
+        console.error("Error al obtener productos:", error);
+      })
+      .finally(() => setLoading(false));
+  }, [categoryLower]);
 
   if (loading)
     return (

@@ -11,7 +11,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     const db = getFirestore();
-    const refDoc = doc(db, "productos", id); 
+    const refDoc = doc(db, "productos", id)
 
     getDoc(refDoc).then((snapshot) => {
       if (snapshot.exists()) {

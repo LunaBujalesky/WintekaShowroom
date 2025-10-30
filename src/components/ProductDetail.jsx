@@ -17,37 +17,9 @@ function ProductDetail({ product }) {
   }
 
   return (
-    <div
-      style={{
-        padding: "50px",
-        textAlign: "center",
-        color: "#322C26",
-        width: "100%",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-        flexDirection: "row",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "20px",
-        }}
-      >
-            
-            <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-            alignItems: "center",
-          }}
-        >
+    <div className="product-detail-container">
+      <div className="container-images" >
+        <div className="left-images">
           {product.variants?.map((v, index) => (
             <img
               key={index}
@@ -78,45 +50,37 @@ function ProductDetail({ product }) {
         </div>
       </div>
 
-      <div
-        style={{
-          textAlign: "left",
-          marginLeft: "20px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "18px",
-        }}
-      >
-        <h2 style={{ fontFamily: "QuencyDemo", fontSize: "48px", margin: "0" }}>
-          {product.title}
-        </h2>
+      <div className="container-detail">
+           <h2 style={{ fontFamily: "QuencyDemo", fontSize: "48px", margin: "0" }}>
+          {product.title} </h2>
 
-        <h3 style={{ fontFamily: "QuencyDemo", fontSize: "22px", margin: "0" }}>
-          ${product.price}
-        </h3>
+           <h3 style={{ fontFamily: "QuencyDemo", fontSize: "22px", margin: "0" }}>
+          ${product.price} </h3>
 
-        <p
+           <p
           style={{
             fontFamily: "Georgia",
             fontSize: "18px",
             margin: "0",
             width: "50%",
           }}
-        >
+           >
           {product.description}
-        </p>
+           </p>
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "space-evenly",
             width: "100%",
             height: "40%",
             margin: "0px",
           }}
         >
+          <div  style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", width: "100%", height: "fit-content", margin: "0px",}} >
           {" "}
           <p>Cantidad:</p> <p>Variante:</p>{" "}
+        
         </div>
         <div
           style={{
@@ -126,24 +90,26 @@ function ProductDetail({ product }) {
             width: "100%",
             height: "fit-content",
             margin: "0px",
-          }} >
-          <ItemCount
+          }}
+        >
+           <ItemCount
             product={product}
             variant={variant}
             setVariant={setVariant}
           />
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <CostoEnvio></CostoEnvio>
-          <button className="botonstyle1" onClick={() => navigate("/checkout")}>
+          <button className="botonstyle1" onClick={() => navigate("/checkout")} style={{ marginTop: "8%" }}>
             {" "}
             Comprar{" "}
           </button>
         </div>
+
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <CostoEnvio></CostoEnvio>
+        </div>
       </div>
     </div>
+    </div>
   );
-}
+};
 
 export default ProductDetail;

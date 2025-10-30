@@ -1,6 +1,7 @@
 .botonstyle1 {
   background-color:#7B8C69; 
-  
+  width: 200px;
+height: 59px;
   color: #EEE0B2;
   padding: 15px 32px;
   text-align: center;
@@ -36,4 +37,42 @@
 .botonstyle2:hover {
   background-color:#322C26; 
   color: #EEE0B2;
+}
+
+
+.product-detail-container {
+  padding: 50px;
+  text-align: center;
+  color: #322C26;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.container-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.container-detail {
+  text-align: left;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 18px;
+  width: 50%;
 }

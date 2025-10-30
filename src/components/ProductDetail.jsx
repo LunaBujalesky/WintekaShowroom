@@ -73,7 +73,7 @@ function ProductDetail({ product }) {
           <img
             src={variant?.image}
             alt={product.title}
-            style={{ width: "300px", Height: "300px" }}
+            style={{ width: "400px", height: "400px" }}
           />
         </div>
       </div>

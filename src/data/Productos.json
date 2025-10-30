@@ -33,7 +33,7 @@
       "id": 3,
       "title": "Sweatter Coffe",
       "price": 21000,
-      "category": "Ropa",
+      "category": "ropa",
       "description": "Sweatter hilo de algodon bordado. Color unico.",
       "variants": [
         { "prueba": "S", "image": "https://raw.githubusercontent.com/LunaBujalesky/WintekaShowroom/main/src/assets/Sweatter1.jpg" },

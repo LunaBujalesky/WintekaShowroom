@@ -33,7 +33,7 @@ function App() {
   return (
     <CartProvider>
     <BrowserRouter>
-      <header>
+      <header style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
         <Header />
         <NavBar scrollToProducts={scrollToProducts} />
       </header>

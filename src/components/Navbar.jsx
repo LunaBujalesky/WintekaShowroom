@@ -43,11 +43,11 @@ function NavBar( { scrollToProducts } ) {
     <nav
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
+        gap: "5%",
         alignItems: "center",
         position: "sticky",
-        padding: "30px 30px 0",
-        left: 0,
+        padding: "5px 30px 10px",
         zIndex: 1000,
         width: "100%",
         background: "#322C26",

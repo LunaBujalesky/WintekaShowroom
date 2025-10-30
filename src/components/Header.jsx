@@ -3,7 +3,7 @@ import TiendaLogo from "../assets/WintekaLogo.svg";
 
 function Header() {
   return (
-    <div style={{ width: "100vw",  height: "180px", background:"#322C26",display: "flex",
+    <div style={{ width: "100%",  height: "180px", background:"#322C26",display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",

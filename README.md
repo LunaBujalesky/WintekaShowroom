@@ -18,7 +18,7 @@ Este proyecto combina estética, funcionalidad y una atmósfera encantadora para
 ![License](https://img.shields.io/badge/Licencia-BSL--1.0-lightgrey)****
 ---
 ## 🌸 Ux/Ui
-<a href="https://www.figma.com/design/YIo21pNws10C4iGyk6rTF4/Ui-talento-tech-Bujalesky----Curso-React?node-id=34-2" target="_blank">Visitar Winteka Showroom</a>
+<a href="https://www.figma.com/design/YIo21pNws10C4iGyk6rTF4/Ui-talento-tech-Bujalesky----Curso-React?node-id=34-2" target="_blank">Ver wireframes</a>
 ---
 
 # Arquitectura de la información del proyecto- Workflow
@@ -32,15 +32,18 @@ Este proyecto combina estética, funcionalidad y una atmósfera encantadora para
 
 El proyecto está organizado de la siguiente manera:
 
+El proyecto está organizado de la siguiente manera:
+
+```text
 WintekaShowroom/
 ├── public/          # Archivos estáticos
 ├── src/             # Código fuente
 │   ├── assets/      # Imágenes y recursos
 │   ├── components/  # Componentes reutilizables       
-│   └── App.jsx       # Componente principal
-│   └──hooks/        # Funciones reutilizables
-│   └──useCart.js 
-├── pages/           #Hojas donde se renderizan los componentes por page 
+│   ├── App.jsx      # Componente principal
+│   ├── hooks/       # Funciones reutilizables
+│   └── useCart.js 
+├── pages/           # Hojas donde se renderizan los componentes por página 
 ├── .gitignore       # Archivos y carpetas ignoradas por Git
 ├── package.json     # Dependencias y scripts del proyecto
 └── vite.config.js   # Configuración de Vite

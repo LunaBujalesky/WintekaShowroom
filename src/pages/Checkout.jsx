@@ -17,7 +17,7 @@ export default function Checkout() {
   const renderStepContent = () => {
     switch (currentStep) {
       case 1:
-        // Paso 1: Resumen de la compra
+        
         return (
           <>
             <CheckoutResumen />
@@ -27,7 +27,7 @@ export default function Checkout() {
         );
 
       case 2:
-        // Paso 2: Envío
+        
         return (
           <>
             <FormularioContacto />
@@ -36,11 +36,11 @@ export default function Checkout() {
         );
 
       case 3:
-        // Paso 3: Pago (solo muestra lo necesario)
+        
         return (
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", marginTop: "30%"}}>
             <h3 style={{ fontFamily: "QuencyDemo" }}>Paso final: Pago</h3>
-            <p>Acá irá la información o integración de pago.</p>
+            <p>Gracias por tu compra! Compra finalizada. Aquí tienes tu código de seguimiento:.</p>
           </div>
         );
 
@@ -65,16 +65,16 @@ export default function Checkout() {
       >
         <h2 style={{ fontFamily: "QuencyDemo" }}>• Completa tu compra •</h2>
 
-        {/* Barra superior de pasos */}
+       
         <PasosCompra currentStep={currentStep} setCurrentStep={setCurrentStep} />
 
-        {/* Contenido principal dinámico */}
+        
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             minHeight: "600px",
             width: "64%",
             margin: "3% auto",
@@ -84,7 +84,7 @@ export default function Checkout() {
           {renderStepContent()}
         </div>
 
-        {/* Total (solo visible en pasos 1 y 2) */}
+       
         {currentStep !== 3 && (
           <div
             style={{
@@ -98,7 +98,7 @@ export default function Checkout() {
           </div>
         )}
 
-        {/* Botones navegación */}
+       
         <div
           style={{
             display: "flex",
@@ -111,7 +111,7 @@ export default function Checkout() {
             gap: "15px",
           }}
         >
-          {/* Botón atrás o regreso */}
+         
           {currentStep === 1 ? (
             <button className="botonstyle1" onClick={() => navigate("/")}>
               Regresar al Carrito
@@ -122,7 +122,7 @@ export default function Checkout() {
             </button>
           )}
 
-          {/* Botón siguiente o finalizar */}
+         
           <button
             className="botonstyle2"
             onClick={handleNext}

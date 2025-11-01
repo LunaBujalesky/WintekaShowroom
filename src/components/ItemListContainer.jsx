@@ -1,8 +1,9 @@
+// ItemListContainer.jsx
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import CardItem from "./CardItem";
-import CargandoGif from "../assets/Cargando.gif";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+import CargandoGif from "../assets/Cargando.gif";
+import ItemList from "./ItemList";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
@@ -14,7 +15,6 @@ function ItemListContainer() {
     const db = getFirestore();
     const productosRef = collection(db, "productos");
 
-   
     const q = categoryLower
       ? query(productosRef, where("category", "==", categoryLower))
       : productosRef;
@@ -27,9 +27,7 @@ function ItemListContainer() {
         }));
         setItems(productos);
       })
-      .catch((error) => {
-        console.error("Error al obtener productos:", error);
-      })
+      .catch((error) => console.error("Error al obtener productos:", error))
       .finally(() => setLoading(false));
   }, [categoryLower]);
 
@@ -59,26 +57,7 @@ function ItemListContainer() {
       </div>
     );
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "20px",
-        justifyContent: "center",
-      }}
-    >
-      {items.map((product) => (
-        <CardItem
-          key={product.id}
-          id={product.id}
-          title={product.title}
-          price={product.price}
-          image={product.variants?.[0]?.image}
-        />
-      ))}
-    </div>
-  );
+  return <ItemList items={items} />;
 }
 
 export default ItemListContainer;

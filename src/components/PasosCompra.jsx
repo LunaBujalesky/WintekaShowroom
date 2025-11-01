@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./PasosCompra.css";
 import StarIcon from "../assets/StarPasosCompra.svg";
 
@@ -8,16 +7,14 @@ const steps = [
   { id: 3, label: "Pago" },
 ];
 
-export default function StepIndicator() {
-  const [activeStep, setActiveStep] = useState(1);
-
+export default function PasosCompra({ currentStep, setCurrentStep }) {
   return (
     <div className="step-container">
       {steps.map((step) => (
         <div
           key={step.id}
-          className={`step ${activeStep === step.id ? "active" : ""}`}
-          onClick={() => setActiveStep(step.id)}
+          className={`step ${currentStep === step.id ? "active" : ""}`}
+          onClick={() => setCurrentStep(step.id)}
         >
           <div className="star-glow">
             <img src={StarIcon} alt="" className="star-svg" />

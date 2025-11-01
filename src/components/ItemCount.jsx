@@ -7,19 +7,16 @@ export default function ItemCount({ product, variant, setVariant }) {
   const [quantity, setQuantity] = useState(1);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Buscar si ya existe en el carrito la misma variante
   const itemEnCarrito = cart.find(
     (item) => item.variantKey === `${product.id}-${variant?.prueba}`
   );
 
-  // Stock base (por variante o producto)
   const stockDisponible = variant?.stock ?? product.stock ?? 0;
 
-  // Cuánto stock queda realmente disponible
   const stockRestanteReal =
     stockDisponible - (itemEnCarrito?.quantity ?? 0);
 
-  const handleIncrease = () => {
+  const aumentarCantidad = () => {
     if (quantity < stockRestanteReal) {
       setQuantity((q) => q + 1);
       setErrorMsg("");
@@ -28,7 +25,7 @@ export default function ItemCount({ product, variant, setVariant }) {
     }
   };
 
-  const handleDecrease = () => {
+  const disminuirCantidad = () => {
     if (quantity > 1) {
       setQuantity((q) => q - 1);
       setErrorMsg("");
@@ -48,7 +45,7 @@ export default function ItemCount({ product, variant, setVariant }) {
     addToCart(product, variant, quantity);
   };
 
-  // Mostrar mensajes según estado del stock
+ 
   let stockTexto = "";
   let stockColor = "#777";
 
@@ -67,7 +64,7 @@ export default function ItemCount({ product, variant, setVariant }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        {/* Selector de cantidad */}
+        
         <div className="selector-group number-wrapper">
           <label htmlFor="quantity" className="selector-label"></label>
           <input
@@ -90,18 +87,17 @@ export default function ItemCount({ product, variant, setVariant }) {
           <div className="number-arrows">
             <button
               type="button"
-              onClick={handleIncrease}
+              onClick={aumentarCantidad}
               className="arrow up"
             />
             <button
               type="button"
-              onClick={handleDecrease}
+              onClick={disminuirCantidad}
               className="arrow down"
             />
           </div>
         </div>
 
-        {/* Selector de variantes */}
         {product.variants && (
           <div className="selector-group">
             <label htmlFor="variant-select" className="selector-label"></label>
@@ -128,7 +124,6 @@ export default function ItemCount({ product, variant, setVariant }) {
         )}
       </div>
 
-      {/* Mensaje de stock */}
       <div style={{ fontSize: "0.9rem", color: stockColor, minHeight: "1.2em" }}>
         {stockTexto}
       </div>

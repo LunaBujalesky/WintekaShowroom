@@ -1,4 +1,4 @@
-// ItemList.jsx
+
 import CardItem from "./CardItem";
 
 function ItemList({ items }) {

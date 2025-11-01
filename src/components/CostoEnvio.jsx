@@ -7,7 +7,7 @@ function CalcularEnvio() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Código postal ingresado:", codigoPostal);
-    // Aquí iría la lógica para calcular el envío
+
   };
 
   return (

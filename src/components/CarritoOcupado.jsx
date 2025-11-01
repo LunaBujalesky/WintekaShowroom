@@ -1,24 +1,14 @@
 import React from "react";
 import "./CarritoOcupado.css";
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "./CartContext"; 
 
-export default function CarritoOcupado({ cart, setCart, onClose, variant, quantity }) {
-  const Remove = (variantKey) => {
-    setCart(cart.filter((item) => item.variantKey !== variantKey));
-  };
+export default function CarritoOcupado({ onClose}) {
 
-  const QuantityChange = (variantKey, newQty) => {
-    setCart(
-      cart.map((item) =>
-        item.variantKey === variantKey
-          ? { ...item, quantity: parseInt(newQty, 10) }
-          : item
-      )
-    );
-  };
+  const { cart, updateQuantity, removeItem } = useCartContext();
 
   const GetVariantName = (variantKey) => {
-     return variantKey.split('-')[1]
+    return variantKey.split('-')[1]
   }
 
   const subtotal = cart.reduce(
@@ -56,7 +46,7 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
                   <select
                     value={item.quantity}
                     onChange={(e) =>
-                      QuantityChange(item.variantKey, e.target.value)
+                      updateQuantity(item.variantKey, e.target.value)
                     }
                   >
                     {[1, 2, 3, 4, 5].map((num) => (
@@ -71,11 +61,11 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
             </div>
             <div className="cart-item">
               <p>Variante: {GetVariantName(item.variantKey)}</p>
-              <p>{quantity}</p>
+              <p>{item.quantity}</p>
             </div>
             <button
               className="remove-button"
-              onClick={() => Remove(item.variantKey)}
+              onClick={() => removeItem(item.variantKey)}
             >
               ×
             </button>

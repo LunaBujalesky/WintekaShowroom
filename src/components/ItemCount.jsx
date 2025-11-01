@@ -3,15 +3,24 @@ import { useCartContext } from "./CartContext";
 import "./SelectorVarianteCantidad.css";
 
 export default function ItemCount({ product, variant, setVariant }) {
-  const { addToCart } = useCartContext();
+  const { cart, addToCart } = useCartContext();
   const [quantity, setQuantity] = useState(1);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Stock según variante o producto
+  // Buscar si ya existe en el carrito la misma variante
+  const itemEnCarrito = cart.find(
+    (item) => item.variantKey === `${product.id}-${variant?.prueba}`
+  );
+
+  // Stock base (por variante o producto)
   const stockDisponible = variant?.stock ?? product.stock ?? 0;
 
+  // Cuánto stock queda realmente disponible
+  const stockRestanteReal =
+    stockDisponible - (itemEnCarrito?.quantity ?? 0);
+
   const handleIncrease = () => {
-    if (quantity < stockDisponible) {
+    if (quantity < stockRestanteReal) {
       setQuantity((q) => q + 1);
       setErrorMsg("");
     } else {
@@ -31,7 +40,7 @@ export default function ItemCount({ product, variant, setVariant }) {
       setErrorMsg("Selecciona una variante");
       return;
     }
-    if (quantity > stockDisponible) {
+    if (quantity > stockRestanteReal) {
       setErrorMsg("No hay suficiente stock disponible");
       return;
     }
@@ -39,23 +48,20 @@ export default function ItemCount({ product, variant, setVariant }) {
     addToCart(product, variant, quantity);
   };
 
-  // Calcular cuántos quedan después de seleccionar cantidad
-  const stockRestante = stockDisponible - quantity;
-
-  // Texto del estado de stock
+  // Mostrar mensajes según estado del stock
   let stockTexto = "";
-  let stockColor = "#777"; // gris por defecto
+  let stockColor = "#777";
 
   if (errorMsg) {
     stockTexto = errorMsg;
     stockColor = "#999";
-  } else if (stockDisponible === 0) {
+  } else if (stockRestanteReal === 0) {
     stockTexto = "No hay stock disponible";
-  } else if (stockRestante === 1) {
+  } else if (stockRestanteReal === 1) {
     stockTexto = "¡Último disponible!";
-    stockColor = "#d67a00"; // tono cálido para resaltar
+    stockColor = "#d67a00";
   } else {
-    stockTexto = `Stock disponible: ${stockRestante}`;
+    stockTexto = `Stock disponible: ${stockRestanteReal}`;
   }
 
   return (
@@ -68,24 +74,30 @@ export default function ItemCount({ product, variant, setVariant }) {
             id="quantity"
             type="number"
             min="1"
-            max={stockDisponible}
+            max={stockRestanteReal}
             value={quantity}
             onChange={(e) => {
               const value = Number(e.target.value);
-              if (value > stockDisponible) {
+              if (value > stockRestanteReal) {
                 setErrorMsg("No hay suficiente stock disponible");
               } else {
                 setErrorMsg("");
               }
-              setQuantity(
-                Math.min(Math.max(1, value), stockDisponible)
-              );
+              setQuantity(Math.min(Math.max(1, value), stockRestanteReal));
             }}
             className="selector-input-number"
           />
           <div className="number-arrows">
-            <button type="button" onClick={handleIncrease} className="arrow up" />
-            <button type="button" onClick={handleDecrease} className="arrow down" />
+            <button
+              type="button"
+              onClick={handleIncrease}
+              className="arrow up"
+            />
+            <button
+              type="button"
+              onClick={handleDecrease}
+              className="arrow down"
+            />
           </div>
         </div>
 
@@ -101,7 +113,7 @@ export default function ItemCount({ product, variant, setVariant }) {
                   (v) => v.prueba === e.target.value
                 );
                 setVariant(selected);
-                setQuantity(1); // reset cantidad
+                setQuantity(1);
                 setErrorMsg("");
               }}
               className="selector-input"
@@ -124,9 +136,9 @@ export default function ItemCount({ product, variant, setVariant }) {
       <button
         className="botonstyle1"
         onClick={handleAddToCart}
-        disabled={stockDisponible === 0}
+        disabled={stockRestanteReal === 0}
       >
-        {stockDisponible === 0 ? "Sin stock" : "Agregar al carrito"}
+        {stockRestanteReal === 0 ? "Sin stock" : "Agregar al carrito"}
       </button>
     </div>
   );

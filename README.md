@@ -32,9 +32,7 @@ Este proyecto combina estética, funcionalidad y una atmósfera encantadora para
 
 El proyecto está organizado de la siguiente manera:
 
-El proyecto está organizado de la siguiente manera:
-
-```text
+<pre>```text
 WintekaShowroom/
 ├── public/          # Archivos estáticos
 ├── src/             # Código fuente
@@ -46,7 +44,7 @@ WintekaShowroom/
 ├── pages/           # Hojas donde se renderizan los componentes por página 
 ├── .gitignore       # Archivos y carpetas ignoradas por Git
 ├── package.json     # Dependencias y scripts del proyecto
-└── vite.config.js   # Configuración de Vite
+└── vite.config.js   # Configuración de Vite ``` </pre>
 
 ---
 # **🚀 Instalación**

@@ -16,6 +16,34 @@ Este proyecto combina estética, funcionalidad y una atmósfera encantadora para
 ![Vite](https://img.shields.io/badge/Framework-Vite-646CFF?logo=vite&logoColor=white)
 ![ESLint](https://img.shields.io/badge/Linter-ESLint-4B32C3?logo=eslint&logoColor=white)
 ![License](https://img.shields.io/badge/Licencia-BSL--1.0-lightgrey)****
+---
+## 🌸 Ux/Ui
+<a href="https://www.figma.com/design/YIo21pNws10C4iGyk6rTF4/Ui-talento-tech-Bujalesky----Curso-React?node-id=34-2" target="_blank">Visitar Winteka Showroom</a>
+---
+
+# Arquitectura de la información del proyecto- Workflow
+![Arquitectura del carrito](https://github.com/LunaBujalesky/WintekaShowroom/blob/main/src/assets/Arquitectura-informaci%C3%B3n-del-Carrito.png?raw=true)
+
+![Frame del proyecto](https://github.com/LunaBujalesky/WintekaShowroom/blob/main/src/assets/Frame%2016.png?raw=true)
+
+---
+
+# 📦 Estructura del proyecto
+
+El proyecto está organizado de la siguiente manera:
+
+WintekaShowroom/
+├── public/          # Archivos estáticos
+├── src/             # Código fuente
+│   ├── assets/      # Imágenes y recursos
+│   ├── components/  # Componentes reutilizables       
+│   └── App.jsx       # Componente principal
+│   └──hooks/        # Funciones reutilizables
+│   └──useCart.js 
+├── pages/           #Hojas donde se renderizan los componentes por page 
+├── .gitignore       # Archivos y carpetas ignoradas por Git
+├── package.json     # Dependencias y scripts del proyecto
+└── vite.config.js   # Configuración de Vite
 
 ---
 # **🚀 Instalación**
@@ -42,24 +70,6 @@ Este proyecto combina estética, funcionalidad y una atmósfera encantadora para
 
 5. La aplicación estará disponible en http://localhost.
 ---
-
-# 📦 Estructura del proyecto
-
-El proyecto está organizado de la siguiente manera:
-
-WintekaShowroom/
-├── public/          # Archivos estáticos
-├── src/             # Código fuente
-│   ├── assets/      # Imágenes y recursos
-│   ├── components/  # Componentes reutilizables
-│   ├── styles/      # Estilos globales
-│   └── App.js       # Componente principal
-├── .gitignore       # Archivos y carpetas ignoradas por Git
-├── package.json     # Dependencias y scripts del proyecto
-└── vite.config.js   # Configuración de Vite
-
----
-
 # 📄 Licencia
 
 Este proyecto está bajo la Licencia BSL-1.0. Puedes consultar los detalles en el archivo LICENSE

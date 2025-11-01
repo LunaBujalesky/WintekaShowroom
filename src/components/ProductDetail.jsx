@@ -97,7 +97,7 @@ function ProductDetail({ product }) {
             variant={variant}
             setVariant={setVariant}
           />
-          <button className="botonstyle1" onClick={() => navigate("/checkout")} style={{ marginTop: "8%" }}>
+          <button className="botonstyle1" onClick={() => navigate("/checkout")} style={{ marginTop: "8%",  }}>
             {" "}
             Comprar{" "}
           </button>

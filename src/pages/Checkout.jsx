@@ -1,18 +1,22 @@
 import PasosCompra from "../components/PasosCompra";
 import "../components/ProductDetail.css";
 import { useNavigate } from "react-router-dom";
-
+import FormularioContacto from "../components/FormularioContacto";
+import CalcularEnvio from "../components/CostoEnvio";
 
 function Checkout() {
     const navigate = useNavigate();
   return (
     <section>
-        <div style={{ display: 'flex', flexDirection: 'column', 
-            alignItems: 'center', justifyContent: 'center', height: 'fit-content', width: '70%', margin: '5% auto', backgroundColor: '#5A6648', }}>
+        <div style={{ display: 'flex', flexDirection: 'column',
+            alignItems: 'center', justifyContent: 'flex-start', height: 'fit-content', width: '70%', margin: '5% auto', backgroundColor: '#5A6648', }}>
           <h2 style={{ fontFamily: 'QuencyDemo',}}>• Completa tu compra •</h2>
             <PasosCompra />
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                 height: '600px', width: '64%', margin: '3% auto', backgroundColor: '#7B8C69',}}>
+               <FormularioContacto/>
+               
+               <CalcularEnvio></CalcularEnvio>
                 </div>
                 <div style={{  height: '78px', width: '64%', marginBottom: '3%', backgroundColor: '#2D3226',}}></div>
                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', height: 'fit-content', width: '64%', marginBottom: '3%', gap: '15px',}}>

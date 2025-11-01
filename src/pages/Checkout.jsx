@@ -10,32 +10,33 @@ import "../components/ProductDetail.css";
 export default function Checkout() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
-  const [isFormValid, setIsFormValid] = useState(false); // 🔸 Nuevo estado
 
-  const handleNext = () => {
-    if (currentStep === 2 && !isFormValid) {
-      alert("Por favor completá correctamente el formulario antes de continuar.");
-      return;
-    }
-    setCurrentStep((prev) => Math.min(prev + 1, 3));
-  };
-
+  const handleNext = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
   const handleBack = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
   const renderStepContent = () => {
     switch (currentStep) {
       case 1:
-        return <CheckoutResumen />;
-
-      case 2:
+        // Paso 1: Resumen de la compra
         return (
           <>
-            <FormularioContacto onValidChange={setIsFormValid} />
+            <CheckoutResumen />
+           
+            
+          </>
+        );
+
+      case 2:
+        // Paso 2: Envío
+        return (
+          <>
+            <FormularioContacto />
             <CalcularEnvio />
           </>
         );
 
       case 3:
+        // Paso 3: Pago (solo muestra lo necesario)
         return (
           <div style={{ textAlign: "center" }}>
             <h3 style={{ fontFamily: "QuencyDemo" }}>Paso final: Pago</h3>
@@ -64,8 +65,10 @@ export default function Checkout() {
       >
         <h2 style={{ fontFamily: "QuencyDemo" }}>• Completa tu compra •</h2>
 
+        {/* Barra superior de pasos */}
         <PasosCompra currentStep={currentStep} setCurrentStep={setCurrentStep} />
 
+        {/* Contenido principal dinámico */}
         <div
           style={{
             display: "flex",
@@ -81,6 +84,7 @@ export default function Checkout() {
           {renderStepContent()}
         </div>
 
+        {/* Total (solo visible en pasos 1 y 2) */}
         {currentStep !== 3 && (
           <div
             style={{
@@ -94,6 +98,7 @@ export default function Checkout() {
           </div>
         )}
 
+        {/* Botones navegación */}
         <div
           style={{
             display: "flex",
@@ -106,6 +111,7 @@ export default function Checkout() {
             gap: "15px",
           }}
         >
+          {/* Botón atrás o regreso */}
           {currentStep === 1 ? (
             <button className="botonstyle1" onClick={() => navigate("/")}>
               Regresar al Carrito
@@ -116,7 +122,11 @@ export default function Checkout() {
             </button>
           )}
 
-          <button className="botonstyle2" onClick={handleNext}>
+          {/* Botón siguiente o finalizar */}
+          <button
+            className="botonstyle2"
+            onClick={handleNext}
+          >
             {currentStep === 3 ? "Finalizar compra" : "Continuar compra"}
           </button>
         </div>

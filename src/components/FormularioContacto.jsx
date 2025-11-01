@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./FormularioContacto.css";
 
-export default function FormularioContacto({ onValidChange }) {
+export default function FormularioContacto() {
   const [formData, setFormData] = useState({
     email: "",
     telefono: "",
   });
 
   const [errors, setErrors] = useState({});
+
 
   const validate = () => {
     const newErrors = {};
@@ -28,14 +29,6 @@ export default function FormularioContacto({ onValidChange }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Cada vez que cambie el formulario, avisamos al padre si es válido
-  useEffect(() => {
-    if (onValidChange) {
-      onValidChange(validate());
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [formData]);
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -55,32 +48,31 @@ export default function FormularioContacto({ onValidChange }) {
   return (
     <form className="formulario-contacto" onSubmit={handleSubmit}>
       <div className="input-containers">
-        <div className="input-group">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className={errors.email ? "input-error" : ""}
-          />
-          {errors.email && <p className="error-text">{errors.email}</p>}
-        </div>
-
-        <div className="input-group">
-          <input
-            type="tel"
-            name="telefono"
-            placeholder="Teléfono"
-            value={formData.telefono}
-            onChange={handleChange}
-            className={errors.telefono ? "input-error" : ""}
-          />
-          {errors.telefono && <p className="error-text">{errors.telefono}</p>}
-        </div>
+      <div className="input-group">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          className={errors.email ? "input-error" : ""}
+        />
+        {errors.email && <p className="error-text">{errors.email}</p>}
       </div>
 
-      <button type="submit" className="botonstyle1" style={{ alignSelf: "flex-end" }}>
+      <div className="input-group">
+        <input
+          type="tel"
+          name="telefono"
+          placeholder="Teléfono"
+          value={formData.telefono}
+          onChange={handleChange}
+          className={errors.telefono ? "input-error" : ""}
+        />
+        {errors.telefono && <p className="error-text">{errors.telefono}</p>}
+      </div>
+</div>
+      <button type="submit" className="botonstyle1" style={{alignSelf: "flex-end"}}>
         Enviar
       </button>
     </form>

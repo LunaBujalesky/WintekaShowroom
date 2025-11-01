@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import WidgetCarritoIMG from "../assets/IconocarroCompra.svg";
 import CarritoVacio from "./CarritoVacio";
-import CarritoConCosas from "./CarritoOcupado";
-import { useCart } from "./CartContext";
+import CarritoOcupado from "./CarritoOcupado";
+import { useCartContext } from "./CartContext";
 
 export default function CartWidget() {
   const [showCart, setShowCart] = useState(false);
-  const { cart, totalQuantity } = useCart();
+  const { cart, totalQuantity } = useCartContext();
 
   const handleCartClick = () => setShowCart((prev) => !prev);
 
@@ -48,7 +48,7 @@ export default function CartWidget() {
               onExplore={() => console.log("Ir a explorar")}
             />
           ) : (
-            <CarritoConCosas
+            <CarritoOcupado
               cart={cart}
               setCart={() => {}}
               onClose={() => setShowCart(false)}

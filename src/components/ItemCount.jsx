@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { useCart } from "./CartContext";
+import { useCartContext } from "./CartContext";
 import "./SelectorVarianteCantidad.css";
+
+
 export default function ItemCount({ product, variant, setVariant }) {
-  const { addToCart } = useCart();
+  const { addToCart } = useCartContext();
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrease = () => setQuantity((q) => Math.min(10, q + 1));
@@ -77,4 +79,4 @@ export default function ItemCount({ product, variant, setVariant }) {
       
     </div>
   );
-}
+};

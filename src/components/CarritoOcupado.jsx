@@ -1,19 +1,25 @@
 import React from "react";
 import "./CarritoOcupado.css";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
-export default function CarritoOcupado({ cart, setCart, onClose, variant, quantity   }) {
-  const handleRemove = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+export default function CarritoOcupado({ cart, setCart, onClose, variant, quantity }) {
+  const Remove = (variantKey) => {
+    setCart(cart.filter((item) => item.variantKey !== variantKey));
   };
 
-  const handleQuantityChange = (id, newQty) => {
+  const QuantityChange = (variantKey, newQty) => {
     setCart(
       cart.map((item) =>
-        item.id === id ? { ...item, quantity: parseInt(newQty, 10) } : item
+        item.variantKey === variantKey
+          ? { ...item, quantity: parseInt(newQty, 10) }
+          : item
       )
     );
   };
+
+  const GetVariantName = (variantKey) => {
+     return variantKey.split('-')[1]
+  }
 
   const subtotal = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -37,7 +43,7 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
 
       <div className="cart-items">
         {cart.map((item) => (
-          <div className="cart-item" key={item.id}>
+          <div className="cart-item" key={item.variantKey}>
             <img src={item.image} alt={item.name} className="cart-item-img" />
 
             <div className="cart-item-details">
@@ -50,7 +56,7 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
                   <select
                     value={item.quantity}
                     onChange={(e) =>
-                      handleQuantityChange(item.id, e.target.value)
+                      QuantityChange(item.variantKey, e.target.value)
                     }
                   >
                     {[1, 2, 3, 4, 5].map((num) => (
@@ -64,12 +70,12 @@ export default function CarritoOcupado({ cart, setCart, onClose, variant, quanti
               </div>
             </div>
             <div className="cart-item">
-            <p>Variante: {item.prueba}</p>
+              <p>Variante: {GetVariantName(item.variantKey)}</p>
               <p>{quantity}</p>
             </div>
             <button
               className="remove-button"
-              onClick={() => handleRemove(item.id)}
+              onClick={() => Remove(item.variantKey)}
             >
               ×
             </button>

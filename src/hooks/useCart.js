@@ -12,7 +12,7 @@ export const useCart = () => {
 			const updatedCart = cart.map((item) => {
 				if (item.variantKey === variantKey) {
 					item.quantity = item.quantity + quantity;
-				}
+				}	
 				return item;
 			});
 
@@ -27,8 +27,7 @@ export const useCart = () => {
 					name: product.title,
 					price: product.price,
 					image: variant.image,
-					color: variant.color,
-					size: variant.size,
+					variant: variant,
 					quantity,
 					variantKey,
 				},

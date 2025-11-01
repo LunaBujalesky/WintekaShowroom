@@ -7,9 +7,13 @@ import CalcularEnvio from "../components/CostoEnvio";
 import CheckoutTotal from "../components/CheckoutTotal";
 import "../components/ProductDetail.css";
 
+import { Order } from "../components/Order";
+
+
 export default function Checkout() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
+  const [buyerData, setBuyerData] = useState({});
 
   const handleNext = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
   const handleBack = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
@@ -30,7 +34,7 @@ export default function Checkout() {
         
         return (
           <>
-            <FormularioContacto />
+            <FormularioContacto onDataChange={setBuyerData} />
             <CalcularEnvio />
           </>
         );
@@ -40,7 +44,8 @@ export default function Checkout() {
         return (
           <div style={{ textAlign: "center", marginTop: "30%"}}>
             <h3 style={{ fontFamily: "QuencyDemo" }}>Paso final: Pago</h3>
-            <p>Gracias por tu compra! Compra finalizada. Aquí tienes tu código de seguimiento:.</p>
+            <Order buyerInfo={buyerData} />
+            <p>Gracias por tu compra!</p>
           </div>
         );
 

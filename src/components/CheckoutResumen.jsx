@@ -14,7 +14,7 @@ export default function CheckoutResumen() {
           <div className="checkout-item-info">
             <p className="nombre">{item.name}</p>
             <p className="detalle">
-              Talle {item.size} – {item.color}
+              Talle/color: {item.variant.prueba} 
             </p>
             <p className="cantidad">Cantidad: {item.quantity}</p>
           </div>

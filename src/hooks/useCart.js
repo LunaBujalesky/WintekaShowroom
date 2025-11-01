@@ -50,6 +50,19 @@ export const useCart = () => {
 		0
 	);
 
+	const updateQuantity = (variantKey, newQty) => {
+  setCart((prevCart) => {
+    return prevCart.map((item) => {
+      if (item.variantKey === variantKey) {
+        const updatedItem = { ...item, quantity: parseInt(newQty, 10) };
+        return updatedItem;
+      } else {
+        return item;
+      }
+    });
+  });
+};
+
 	return {
 		cart,
 		addToCart,
@@ -57,5 +70,6 @@ export const useCart = () => {
 		clearCart,
 		totalQuantity,
 		totalPrice,
+		updateQuantity
 	};
 };
